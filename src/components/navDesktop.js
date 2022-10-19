@@ -38,4 +38,30 @@ function NavDesktop() {
     )
 }
 
+// Scrolling menu
+const scrollingMenuBtn = document.querySelector("#scrollingMenu__btn");
+const scrollingMenu = document.querySelector("#scrollingMenu");
+const goToCheckPoint = document.querySelectorAll(".goToCheckPoint");
+
+// Arrow rotate
+const whyWithUs = document.querySelector("#whyWithUs");
+const contactUs = document.querySelector("#contactUs");
+const arrow = document.querySelectorAll(".arrow");
+const whyWithUsArrow = document.querySelector("#whyWithUsArrow");
+const contactUsArrow = document.querySelector("#contactUsArrow");
+const whyWithUsMenu = document.querySelector("#whyWithUsMenu");
+const contactMenu = document.querySelector("#contactMenu");
+const scrollingMenu__desktop = document.querySelector(".scrollingMenu__desktop");
+
+// Scrolling menu start
+goToCheckPoint.forEach(function(element) {
+    element.addEventListener("click", scrollMenu);
+});
+
+function scrollMenu() {
+    scrollingMenuBtn.classList.toggle("active");
+    scrollingMenu.classList.toggle("active");
+}
+// Scrolling menu end
+
 export default NavDesktop

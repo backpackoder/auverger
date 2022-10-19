@@ -1,11 +1,11 @@
 function FloatingMenu() {
     return (
         <div id="menu__container">
-            <div id="scrollingMenu__btn"></div>
+            <div onClick={scrollMenu} id="scrollingMenu__btn"></div>
             <div id="scrollingMenu">
                 <h1 id="h1InMenu" translate="no">Au verger B&B</h1>
                 <ul id="sections">
-                    <li id="whyWithUs"><a href="#"><span id="whyWithUsArrow">➢</span>Pourquoi nous choisir ?</a></li>
+                    <li onClick={whyWithUsArrowRotate} id="whyWithUs"><a href="#"><span id="whyWithUsArrow">➢</span>Pourquoi nous choisir ?</a></li>
                         <ul id="whyWithUsMenu">
                             <li><a href="#swimmingPoolCheckPoint" className="goToCheckPoint">➢ La piscine</a></li>
                             <li><a href="#theRiverCheckPoint" className="goToCheckPoint">➢ La rivière</a></li>
@@ -20,7 +20,7 @@ function FloatingMenu() {
                     <li><a href="#" className="goToCheckPoint photosMenuTrigger">➢ Voir les photos</a></li>
                     <li><a href="#yourHostsCheckPoint" className="goToCheckPoint">➢ Vos hôtes</a></li>
                     <li><a href="#guestReviewsCheckPoint" className="goToCheckPoint">➢ Nos commentaires</a></li>
-                    <li id="contactUs"><a href="#"><span id="contactUsArrow">➢</span>Contactez-nous</a></li>
+                    <li onClick={contactUsArrowRotate} id="contactUs"><a href="#"><span id="contactUsArrow">➢</span>Contactez-nous</a></li>
                         <ul id="contactMenu" className="contactMenu">
                             <li className="whatsappInfos">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"
@@ -38,5 +38,36 @@ function FloatingMenu() {
         </div>
     )
 }
+
+// Scrolling menu
+const scrollingMenuBtn = document.querySelector("#scrollingMenu__btn");
+const scrollingMenu = document.querySelector("#scrollingMenu");
+
+// Arrow rotate
+const whyWithUs = document.querySelector("#whyWithUs");
+const contactUs = document.querySelector("#contactUs");
+const arrow = document.querySelectorAll(".arrow");
+const whyWithUsArrow = document.querySelector("#whyWithUsArrow");
+const contactUsArrow = document.querySelector("#contactUsArrow");
+const whyWithUsMenu = document.querySelector("#whyWithUsMenu");
+const contactMenu = document.querySelector("#contactMenu");
+const scrollingMenu__desktop = document.querySelector(".scrollingMenu__desktop");
+
+function scrollMenu() {
+    scrollingMenuBtn.classList.toggle("active");
+    scrollingMenu.classList.toggle("active");
+}
+
+// Arrow rotate start
+function whyWithUsArrowRotate() {
+    whyWithUsArrow.classList.toggle("arrowDown");
+    whyWithUsMenu.classList.toggle("active");
+}
+
+function contactUsArrowRotate() {
+    contactUsArrow.classList.toggle("arrowDown");
+    contactMenu.classList.toggle("active");
+}
+// Arrow rotate end
 
 export default FloatingMenu

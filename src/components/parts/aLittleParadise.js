@@ -34,7 +34,7 @@ function ALittleParadise() {
                     <div className="descrBlock-row">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/81054104.jpg?k=685a7ec28e9829024f194aa1756853cfe97f0ed38cb75bd1ed5a82eca972058a&o=&hp=1"
                         alt="La rivière"
-                            class="descrBlockImg reveal-img" />
+                        className="descrBlockImg reveal-img" />
                         <p className="mainDescr reveal-p">La nature n'est qu'à un pas de votre lit.
                             Vous pourrez apprécier les canards et plein d'autres éspèces aviaires le long de la rivière.
                             La Bévéra est une douce rivière franco-italienne qui coule dans le département français des Alpes-Maritimes jusqu'à la province italienne d'Imperia.

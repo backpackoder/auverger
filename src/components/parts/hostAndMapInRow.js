@@ -26,7 +26,7 @@ function HostAndMapInRow() {
                     <h3 id="mapTitle" className="reveal-h3">L'hébergement sur Google maps</h3>
                     <div id="mapWrapper" className="reveal-img">
                         <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=7.461538016796113%2C43.87829894538044%2C7.464987337589265%2C43.87957302454929&amp;layer=mapnik&amp;marker=43.87893598837037%2C7.463262677192688"
-                        id="iframeMap" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        id="iframeMap" width="100%" height="100%" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                     </div>
                     <small className="reveal-p">
                         <a href="https://www.openstreetmap.org/?mlat=43.87894&amp;mlon=7.46326#map=19/43.87894/7.46326"

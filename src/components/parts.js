@@ -6,7 +6,19 @@ import OurComments from './parts/ourComments';
 import HostAndMapInRow from './parts/hostAndMapInRow';
 
 function Parts() {
-    // Scroll animations start
+    return (
+        <>
+        <DiscoverAndEnjoy />
+        <ALittleParadise />
+        <OurServices />
+        <WhatToDo />
+        <OurComments />
+        <HostAndMapInRow />
+        </>
+    )
+}
+
+// Scroll animations start
 const ratio = 0.2;
 const options = {
     root: null,
@@ -28,17 +40,5 @@ document.querySelectorAll(".reveal").forEach(function(r) {
     observer.observe(r);
 })
 // Scroll animations end
-
-    return (
-        <>
-        <DiscoverAndEnjoy />
-        <ALittleParadise />
-        <OurServices />
-        <WhatToDo />
-        <OurComments />
-        <HostAndMapInRow />
-        </>
-    )
-}
 
 export default Parts;

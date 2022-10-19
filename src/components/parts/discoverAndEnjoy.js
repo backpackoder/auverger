@@ -28,7 +28,7 @@ function DiscoverAndEnjoy() {
                     <div id="swimmingPoolCheckPoint"></div>
                     <div className="iconsInRow reveal-icon">
                         <i className="fa-solid fa-water-ladder"></i>
-                        <i clclassNameass="fa-solid fa-umbrella-beach"></i>
+                        <i className="fa-solid fa-umbrella-beach"></i>
                     </div>
                     <div className="descrBlock-row">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/101637024.jpg?k=49da771f41ef74d150d9023c0b30423fa163683afa609ea6b574cf8bd367432f&o=&hp=1"
