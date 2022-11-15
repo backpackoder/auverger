@@ -1,38 +1,16 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import './cssfiles/main.css';
+@import './cssfiles/header.css';
+@import './cssfiles/menumobile.css';
+@import './cssfiles/menudesktop.css';
+@import './cssfiles/descrblock.css';
+@import './cssfiles/ourcomments.css';
+@import './cssfiles/hostsandmap.css';
+@import './cssfiles/carousel.css';
+@import './cssfiles/bookbtn.css';
+@import './cssfiles/footer.css';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Media queries */
+@import './cssfiles/mediaquerymin600.css';
+@import './cssfiles/mediaquerymin801.css';
+@import './cssfiles/mediaquerymin1024.css';

@@ -1,0 +1,62 @@
+/* Footer start */
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(255, 200, 150);
+    color: #000;
+    padding-bottom: 80px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+}
+#footer__links__a {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 20px 0;
+}
+#footer__links__a > a {
+    color: #000;
+    margin: 5px 0;
+}
+#footer__contact {
+    display: flex;
+    flex-direction: column;
+}
+.footerTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.NumberPhoneContact, .mailContact {
+    display: none;
+}
+#footer > div > ul > li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+#footer__contact > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#footer__contact > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+}
+.contactLogoWhatsApp, .contactLogoMail {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#adressText {
+    font-size: 2rem;
+}
+/* Footer end */

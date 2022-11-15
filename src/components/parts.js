@@ -1,11 +1,17 @@
-import DiscoverAndEnjoy from './parts/discoverAndEnjoy';
-import ALittleParadise from './parts/aLittleParadise';
-import OurServices from './parts/ourServices';
-import WhatToDo from './parts/whatToDo';
-import OurComments from './parts/ourComments';
-import HostAndMapInRow from './parts/hostAndMapInRow';
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import DiscoverAndEnjoy from "./parts/discoverandenjoy"
+import ALittleParadise from "./parts/alittleparadise"
+import OurServices from "./parts/ourservices"
+import WhatToDo from "./parts/whattodo"
+import OurComments from './parts/ourcomments';
+import HostsAndMap from './parts/hostsandmap';
 
 function Parts() {
+    useEffect(() => {
+        Aos.init({offset: 100, duration: 700, once: true});
+    }, []);
     return (
         <>
         <DiscoverAndEnjoy />
@@ -13,32 +19,9 @@ function Parts() {
         <OurServices />
         <WhatToDo />
         <OurComments />
-        <HostAndMapInRow />
+        <HostsAndMap />
         </>
     )
 }
 
-// Scroll animations start
-const ratio = 0.2;
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: ratio
-  }
-  
-const handleIntersect = function(entries, observer) {
-    entries.forEach(function (entry) {
-        if (entry.intersectionRatio > ratio) {
-            entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
-        }
-    })
-}
-
-const observer = new IntersectionObserver(handleIntersect, options);
-document.querySelectorAll(".reveal").forEach(function(r) {
-    observer.observe(r);
-})
-// Scroll animations end
-
-export default Parts;
+export default Parts

@@ -1,0 +1,121 @@
+/* Menu Mobile */
+#menu__container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 99%;
+    height: 99%;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    pointer-events: none;
+}
+#scrollingMenu {
+    position: relative;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: bisque;
+    border-bottom-right-radius: 20px;
+    margin-left: 20%;
+    transition: 0.75s;
+    pointer-events: auto;
+}
+#scrollingMenu.active {
+    right: 20%;
+}
+#h1InMenu {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+#sections {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+#sections > li {
+    list-style: none;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+#whyWithUsArrow, #contactUsArrow {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
+.arrowDown {
+    transform: rotate(90deg);
+}
+#whyWithUsMenu {
+    display: none;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    list-style: none;
+}
+#whyWithUsMenu.active {
+    display: block;
+}
+.contactMenu > li {
+    cursor: pointer;
+}
+.contactMenu > li > * {
+    padding: 0;
+    margin: 0;
+}
+#contactMenu {
+    display: none;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    list-style: none;
+}
+#contactMenu.active {
+    display: block;
+}
+#contactMenu > li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 5px;
+}
+.navMenu > li > img {
+    margin-left: 10px;
+}
+#scrollingMenu__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(245, 245, 220, 0.5);
+    color: red;
+    text-align: left;
+    border-radius: 10px;
+    transition: 0.75s;
+    pointer-events: auto;
+}
+#scrollingMenu__btn.active {
+    left: 80%;
+    background-color: bisque;
+    border-radius: 0 10px 10px 0;
+}
+#scrollingMenu__btn.none {
+    display: none;
+}
+#scrollingMenu__btn::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    border-top: solid 2px;
+}
+#scrollingMenu__btn::after {
+    content: "";
+    width: 40px;
+    height: 30px;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+}
+/* Menu end */

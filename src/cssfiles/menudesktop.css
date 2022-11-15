@@ -1,0 +1,7 @@
+/* Menu desktop */
+ul {
+    list-style-type: none;
+}
+#nav__Desktop {
+    display: none;
+}

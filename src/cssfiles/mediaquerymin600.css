@@ -1,0 +1,41 @@
+@media screen and (min-width: 600px) {
+    /* Carousel */
+    #slideContainer.grid {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Parts */
+    .descrBlock-row {
+        display: block;
+        background-color: rgb(255, 215, 180);
+    }
+    .descrBlockImg {
+        float: right;
+        max-width: 50%;
+        margin-left: 15px;
+    }
+    .mainDescr {
+        max-width: 100%;
+        background-color: transparent;
+        font-size: 1.8rem;
+        font-style: italic;
+        text-align: justify;
+        vertical-align: middle;
+        line-height: 3rem;
+        padding-right: 10px;
+    }
+
+    /* Footer */
+    #footer__links__a {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: auto auto auto;
+    }
+    #footer__contact ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,44 @@
+#hostAndMapInRow {
+    margin: 0 5%;
+}
+
+/* yourHosts start */
+#posYourHostsImg {
+    width: 200px;
+    margin: 0 auto 10px;
+}
+#yourHostsImg {
+    width: 100%;
+    clip-path: ellipse(33% 50%);
+}
+#yourHostsDescr {
+    background-color: rgb(255, 215, 180);
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    margin: 0 auto;
+}
+/* yourHosts end */
+
+/* map start */
+#map {
+    height: 100%;
+    margin: 0;
+}
+#mapTitle {
+    text-align: left;
+}
+#mapWrapper {
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+#iframeMap {
+    width: 100%;
+    border: 1px solid black;
+}
+/* map end */

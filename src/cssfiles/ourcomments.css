@@ -1,0 +1,18 @@
+/* Guest reviews start */
+#guestReviews {
+    text-align: left;
+    margin: 0 5%;
+}
+#guestReviewsContainer {
+    background-color: #e6f2ff;
+    padding: 10px 15px 0;
+    border: solid 1px darkblue;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#guestReviewsTitle {
+    text-align: left;
+}
+/* Guest reviews end */
