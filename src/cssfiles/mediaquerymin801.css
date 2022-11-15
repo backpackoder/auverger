@@ -6,6 +6,7 @@
     /* Menu desktop */
     #nav__Desktop {
         display: block;
+        position: sticky;
     }
 
     /* Navigation menu start */
@@ -114,11 +115,5 @@
     }
     #scrollingMenu {
         display: none;
-    }
-    .slideIndex {
-        top: 60px;
-    }
-    .slideBtn {
-        top: 60px;
     }
 }

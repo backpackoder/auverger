@@ -5,3 +5,6 @@ ul {
 #nav__Desktop {
     display: none;
 }
+#nav__Desktop > ul {
+    margin: 8px 0;
+}

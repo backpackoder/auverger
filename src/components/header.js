@@ -120,20 +120,18 @@ function Header() {
 
   return (
     <>
-      <header>
-        <Title />
-        <NavMobile
-          SubMenuWhyWithUs={SubMenuWhyWithUs}
-          scrollMenu={scrollMenu}
-          isMenuScrolled={isMenuScrolled}
-          setIsMenuScrolled={setIsMenuScrolled}
-          openPhotosMenu={openPhotosMenu}
-        />
-        <NavDesktop
-          SubMenuWhyWithUs={SubMenuWhyWithUs}
-          openPhotosMenu={openPhotosMenu}
-        />
-      </header>
+      <Title />
+      <NavMobile
+        SubMenuWhyWithUs={SubMenuWhyWithUs}
+        scrollMenu={scrollMenu}
+        isMenuScrolled={isMenuScrolled}
+        setIsMenuScrolled={setIsMenuScrolled}
+        openPhotosMenu={openPhotosMenu}
+      />
+      <NavDesktop
+        SubMenuWhyWithUs={SubMenuWhyWithUs}
+        openPhotosMenu={openPhotosMenu}
+      />
       <BootstrapCarousel
         isGrid={isGrid}
         menuOpened={menuOpened}
@@ -146,4 +144,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header
