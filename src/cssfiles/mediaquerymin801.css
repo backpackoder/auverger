@@ -1,5 +1,5 @@
 /* Tablets */
-@media screen and (min-width: 801px) {
+@media (min-width: 801px) {
     #h1 {
         position: relative;
     }

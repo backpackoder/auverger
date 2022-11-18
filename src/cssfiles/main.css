@@ -9,6 +9,7 @@ body {
     background-color: bisque;
     text-align: center;
     margin: 0;
+    overflow-x: hidden;
 }
 body.noscroll {
     overflow: hidden;

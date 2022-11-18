@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
     /* Carousel */
     #slideContainer.grid {
         display: grid;
