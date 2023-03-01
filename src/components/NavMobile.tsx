@@ -1,6 +1,15 @@
+import React from "react";
+
 import { useState } from "react";
 
-function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMenu }) {
+type Props = {
+  SubMenuWhyWithUs: Function;
+  scrollMenu: Function;
+  isMenuScrolled: boolean;
+  openPhotosMenu: Function;
+};
+
+function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMenu }: Props) {
   // Arrow rotate start
   const [isWhyWithUsArrowRotated, setIsWhyWithUsArrowRotated] = useState(false);
 
@@ -18,7 +27,7 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
   return (
     <div id="menu__container">
       <div
-        onClick={scrollMenu}
+        onClick={() => scrollMenu()}
         id="scrollingMenu__btn"
         className={isMenuScrolled ? "" : "active"}
       ></div>
@@ -46,7 +55,7 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
           </li>
           <li>
             <a
-              onClick={openPhotosMenu}
+              onClick={() => openPhotosMenu()}
               href="/#"
               className="goToCheckPoint photosMenuTrigger"
             >
@@ -55,7 +64,7 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
           </li>
           <li>
             <a
-              onClick={scrollMenu}
+              onClick={() => scrollMenu()}
               href="#yourHostsCheckPoint"
               className="goToCheckPoint"
             >
@@ -64,7 +73,7 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
           </li>
           <li>
             <a
-              onClick={scrollMenu}
+              onClick={() => scrollMenu()}
               href="#guestReviewsCheckPoint"
               className="goToCheckPoint"
             >

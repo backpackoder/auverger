@@ -1,17 +1,19 @@
+import React from "react"
+
 import { useState } from "react"
 
-function MenuPart1(scrollMenu) {
+function MenuPart1({scrollMenu}: {scrollMenu: Function}) {
     return (
         <>
-        <li><a onClick={scrollMenu} href="#swimmingPoolCheckPoint" className="goToCheckPoint">➢ La piscine</a></li>
-        <li><a onClick={scrollMenu} href="#theRiverCheckPoint" className="goToCheckPoint">➢ La rivière</a></li>
-        <li><a onClick={scrollMenu} href="#aPeacefulPlaceCheckPoint" className="goToCheckPoint">➢ Le calme</a></li>
-        <li><a onClick={scrollMenu} href="#theBedroomCheckPoint" className="goToCheckPoint">➢ La chambre à coucher</a></li>
-        <li><a onClick={scrollMenu} href="#theBreakfastCheckPoint" className="goToCheckPoint">➢ Le petit-déjeuner</a></li>
-        <li><a onClick={scrollMenu} href="#ourAdvantagesCheckPoint" className="goToCheckPoint">➢ Nos avantages</a></li>
-        <li><a onClick={scrollMenu} href="#theActivitiesCheckPoint" className="goToCheckPoint">➢ Les activités</a></li>
-        <li><a onClick={scrollMenu} href="#theSurroundingsCheckPoint" className="goToCheckPoint">➢ Les alentours</a></li>
-        <li><a onClick={scrollMenu} href="#mapCheckPoint" className="goToCheckPoint">➢ Voir sur la carte</a></li>
+        <li><a onClick={() => scrollMenu()} href="#swimmingPoolCheckPoint" className="goToCheckPoint">➢ La piscine</a></li>
+        <li><a onClick={() => scrollMenu()} href="#theRiverCheckPoint" className="goToCheckPoint">➢ La rivière</a></li>
+        <li><a onClick={() => scrollMenu()} href="#aPeacefulPlaceCheckPoint" className="goToCheckPoint">➢ Le calme</a></li>
+        <li><a onClick={() => scrollMenu()} href="#theBedroomCheckPoint" className="goToCheckPoint">➢ La chambre à coucher</a></li>
+        <li><a onClick={() => scrollMenu()} href="#theBreakfastCheckPoint" className="goToCheckPoint">➢ Le petit-déjeuner</a></li>
+        <li><a onClick={() => scrollMenu()} href="#ourAdvantagesCheckPoint" className="goToCheckPoint">➢ Nos avantages</a></li>
+        <li><a onClick={() => scrollMenu()} href="#theActivitiesCheckPoint" className="goToCheckPoint">➢ Les activités</a></li>
+        <li><a onClick={() => scrollMenu()} href="#theSurroundingsCheckPoint" className="goToCheckPoint">➢ Les alentours</a></li>
+        <li><a onClick={() => scrollMenu()} href="#mapCheckPoint" className="goToCheckPoint">➢ Voir sur la carte</a></li>
         </>
     )
 }
@@ -45,16 +47,7 @@ function MenuPart3() {
     )
 }
 
-function NavMobile() {
-
-// Scrolling menu start
-const [isMenuScrolled, setIsMenuScrolled] = useState(true)
-
-function scrollMenu() {
-    setIsMenuScrolled(!isMenuScrolled)
-}
-// Scrolling menu end
-
+function NavMobile({scrollMenu, isMenuScrolled}: {scrollMenu: Function, isMenuScrolled: boolean}) {
 // Arrow rotate start
 const [isWhyWithUsArrowRotated, setIsWhyWithUsArrowRotated] = useState(false)
 
@@ -71,13 +64,13 @@ function contactUsArrowRotate() {
 
     return (
         <div id="menu__container">
-            <div onClick={scrollMenu} id="scrollingMenu__btn" className={isMenuScrolled ? '' : 'active'}></div>
+            <div onClick={() => scrollMenu} id="scrollingMenu__btn" className={isMenuScrolled ? '' : 'active'}></div>
             <div id="scrollingMenu" className={isMenuScrolled ? '' : 'active'}>
                 <h1 id="h1InMenu" translate="no">Au verger B&B</h1>
                 <ul id="sections">
                     <li onClick={whyWithUsArrowRotate} id="whyWithUs"><a href="/#"><span id="whyWithUsArrow" className={isWhyWithUsArrowRotated ? 'arrowDown' : ''}>➢</span>Pourquoi nous choisir ?</a>
                         <ul id="whyWithUsMenu" className={isWhyWithUsArrowRotated ? 'active' : ''}>
-                        <MenuPart1 />
+                        <MenuPart1 scrollMenu={scrollMenu} />
                         </ul>
                     </li>
                         <MenuPart2 />
@@ -92,13 +85,13 @@ function contactUsArrowRotate() {
     )
 }
 
-function NavDesktop() {
+function NavDesktop({scrollMenu}: {scrollMenu: Function}) {
     return (
         <nav id="nav__Desktop">
             <ul>
                 <li className="scrollingMenu__desktop"><a href="/#">➢ Pourquoi nous choisir ?</a>
                     <ul className="navMenu">
-                        <MenuPart1 />
+                        <MenuPart1 scrollMenu={scrollMenu} />
                     </ul>
                 </li>
                     <MenuPart2 />
@@ -113,10 +106,18 @@ function NavDesktop() {
 }
 
 function Navigations() {
+    // Scrolling menu start
+    const [isMenuScrolled, setIsMenuScrolled] = useState(true)
+    
+    function scrollMenu() {
+        setIsMenuScrolled(!isMenuScrolled)
+    }
+    // Scrolling menu end
+
     return (
         <>
-        <NavMobile />
-        <NavDesktop />
+        <NavMobile scrollMenu={scrollMenu} isMenuScrolled={isMenuScrolled} />
+        <NavDesktop scrollMenu={scrollMenu} />
         </>
     )
 }

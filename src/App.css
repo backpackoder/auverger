@@ -1,16 +1,15 @@
-
-@import './cssfiles/main.css';
-@import './cssfiles/header.css';
-@import './cssfiles/menumobile.css';
-@import './cssfiles/menudesktop.css';
-@import './cssfiles/descrblock.css';
-@import './cssfiles/ourcomments.css';
-@import './cssfiles/hostsandmap.css';
-@import './cssfiles/carousel.css';
-@import './cssfiles/bookbtn.css';
-@import './cssfiles/footer.css';
+@import "./cssfiles/main.css";
+@import "./cssfiles/header.css";
+@import "./cssfiles/menumobile.css";
+@import "./cssfiles/menudesktop.css";
+@import "./cssfiles/descrblock.css";
+@import "./cssfiles/ourcomments.css";
+@import "./cssfiles/hostsandmap.css";
+@import "./cssfiles/carousel.css";
+@import "./cssfiles/bookbtn.css";
+@import "./cssfiles/footer.css";
 
 /* Media queries */
-@import './cssfiles/mediaquerymin600.css';
-@import './cssfiles/mediaquerymin801.css';
-@import './cssfiles/mediaquerymin1024.css';
+@import "./cssfiles/mediaquerymin600.css";
+@import "./cssfiles/mediaquerymin801.css";
+@import "./cssfiles/mediaquerymin1024.css";

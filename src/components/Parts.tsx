@@ -1,12 +1,15 @@
+import React from "react";
+
 import Aos from "aos";
+
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import DiscoverAndEnjoy from "./parts/discoverandenjoy"
-import ALittleParadise from "./parts/alittleparadise"
-import OurServices from "./parts/ourservices"
-import WhatToDo from "./parts/whattodo"
-import OurComments from './parts/ourcomments';
-import HostsAndMap from './parts/hostsandmap';
+import DiscoverAndEnjoy from "./parts/DiscoverAndEnjoy"
+import ALittleParadise from "./parts/ALittleParadise"
+import OurServices from "./parts/OurServices";
+import WhatToDo from "./parts/WhatToDo";
+import OurComments from "./parts/OurComments";
+import HostsAndMap from './parts/HostAndMap';
 
 function Parts() {
     useEffect(() => {

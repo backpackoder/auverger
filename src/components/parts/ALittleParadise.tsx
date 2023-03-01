@@ -1,3 +1,5 @@
+import React from "react";
+
 function APeacefulPlace() {
     return (
         <div className="descrBlockWrapper">

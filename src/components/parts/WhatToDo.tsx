@@ -1,3 +1,5 @@
+import React from "react";
+
 function TheActivities() {
     return (
         <div className="descrBlockWrapper">

@@ -1,11 +1,13 @@
+import React from "react";
+
 import { useState } from "react";
 
-import Title from "./title";
-import NavMobile from "./navMobile";
-import NavDesktop from "./navDesktop";
-import BootstrapCarousel from "./bootstrapCarousel";
+import Title from "./Title";
+import NavMobile from "./NavMobile";
+import NavDesktop from "./NavDesktop";
+import BootstrapCarousel from "./BootstrapCarousel";
 
-function SubMenuWhyWithUs(scrollMenu) {
+function SubMenuWhyWithUs(scrollMenu: Function) {
   return (
     <>
       <li>
@@ -125,7 +127,6 @@ function Header() {
         SubMenuWhyWithUs={SubMenuWhyWithUs}
         scrollMenu={scrollMenu}
         isMenuScrolled={isMenuScrolled}
-        setIsMenuScrolled={setIsMenuScrolled}
         openPhotosMenu={openPhotosMenu}
       />
       <NavDesktop

@@ -1,3 +1,5 @@
+import React from "react";
+
 import Carousel from "react-bootstrap/Carousel";
 
 const imgList = [
@@ -58,18 +60,14 @@ const imgList = [
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/396084582.jpg?k=cf3e7c48bbe00cbee31f671c76c24e29c5ef33abff8be4b0c9b0a256a8c9ffc3&o=&hp=1",
-    altImg:
-      "Rien de mieux que de trouver un beau coin à l'ombre près de la rivière",
-    children:
-      "Rien de mieux que de trouver un beau coin à l'ombre près de la rivière.",
+    altImg: "Rien de mieux que de trouver un beau coin à l'ombre près de la rivière",
+    children: "Rien de mieux que de trouver un beau coin à l'ombre près de la rivière.",
   },
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/78794406.jpg?k=4cb9cc076c8232e9e3f76f82399c5de225a93865e323b2ac1aac0119975498a7&o=&hp=1",
-    altImg:
-      "Si vous êtes assez silencieux, de nombreuses éspèces aviaires vous rejoindrons",
-    children:
-      "Si vous êtes assez silencieux, de nombreuses éspèces aviaires vous rejoindrons.",
+    altImg: "Si vous êtes assez silencieux, de nombreuses éspèces aviaires vous rejoindrons",
+    children: "Si vous êtes assez silencieux, de nombreuses éspèces aviaires vous rejoindrons.",
   },
   {
     srcIgm:
@@ -80,17 +78,14 @@ const imgList = [
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/78794080.jpg?k=13b31b3256919f713a53213436c424481477934328643a823fdab8b60f881361&o=&hp=1",
-    altImg:
-      "Les canards, qui connaissent très bien vos hôtes, participent au charme de ce lieu",
-    children:
-      "Les canards, qui connaissent très bien vos hôtes, participent au charme de ce lieu.",
+    altImg: "Les canards, qui connaissent très bien vos hôtes, participent au charme de ce lieu",
+    children: "Les canards, qui connaissent très bien vos hôtes, participent au charme de ce lieu.",
   },
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/401644048.jpg?k=6b97a895f233e898382ccb3cbf34f33f3245c1be12498c56c72542061324074c&o=&hp=1",
     altImg: "Les serres protègent les plantations les plus fragiles du potager",
-    children:
-      "Les serres protègent les plantations les plus fragiles du potager.",
+    children: "Les serres protègent les plantations les plus fragiles du potager.",
   },
   {
     srcIgm:
@@ -117,10 +112,8 @@ const imgList = [
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/401643986.jpg?k=e495855934751e1099848e439956ccf6ee66fd55365e7cdf91e4171cb24eb0b8&o=&hp=1",
-    altImg:
-      "L'établissement convient également parfaitement aux amateurs de moto",
-    children:
-      "L'établissement convient également parfaitement aux amateurs de moto.",
+    altImg: "L'établissement convient également parfaitement aux amateurs de moto",
+    children: "L'établissement convient également parfaitement aux amateurs de moto.",
   },
   {
     srcIgm:
@@ -133,10 +126,8 @@ const imgList = [
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/401643988.jpg?k=421715b55acd282e192ae707dc25afc2f5c0a15a0210c49d77e1900c1b2734b2&o=&hp=1",
-    altImg:
-      "De multiples fleurs et plantes sont plantées tout autour de la maison",
-    children:
-      "De multiples fleurs et plantes sont plantées tout autour de la maison.",
+    altImg: "De multiples fleurs et plantes sont plantées tout autour de la maison",
+    children: "De multiples fleurs et plantes sont plantées tout autour de la maison.",
   },
   {
     srcIgm:
@@ -149,8 +140,7 @@ const imgList = [
   {
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/81053140.jpg?k=34787d92a3c145ddb5624e38943080b93550b407dca2d576438bb8892c25f304&o=&hp=1",
-    altImg:
-      "Si vous êtes un amateur de champignons, vous allez adorer randonner dans les environs",
+    altImg: "Si vous êtes un amateur de champignons, vous allez adorer randonner dans les environs",
     children:
       "Si vous êtes un amateur de champignons, vous allez adorer randonner dans les environs.",
   },
@@ -158,8 +148,7 @@ const imgList = [
     srcIgm:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/81055337.jpg?k=0c6567b52325c07d4fb4c98d71ae5de40c2d6fd98faac0fe6e9f22f44e69713f&o=&hp=1",
     altImg: "Les fruits et légumes du jardin aident à la créativité culinaire",
-    children:
-      "Les fruits et légumes du jardin aident à la créativité culinaire.",
+    children: "Les fruits et légumes du jardin aident à la créativité culinaire.",
   },
   {
     srcIgm:
@@ -169,6 +158,15 @@ const imgList = [
   },
 ];
 
+type Props = {
+  isGrid: boolean;
+  menuOpened: boolean;
+  seeThePhotosBtn: boolean;
+  openOrCloseMenu: boolean
+  isPhotosMenuOff: boolean;
+  openPhotosMenu: () => void;
+};
+
 function BootstrapCarousel({
   isGrid,
   menuOpened,
@@ -176,50 +174,37 @@ function BootstrapCarousel({
   openOrCloseMenu,
   isPhotosMenuOff,
   openPhotosMenu,
-}) {
+}: Props) {
   return (
     <>
       <div
         onClick={openPhotosMenu}
         id="slideImgInBigScreenBg"
-        className={seeThePhotosBtn ? "active" : null}
+        className={seeThePhotosBtn ? "active" : undefined}
       ></div>
       <div id="carousel">
-        <div
-          id="slideImgInBigScreenContainer"
-          className={seeThePhotosBtn ? "active" : null}
-        >
-          <div id="slideContainer" className={isGrid ? "grid" : null}>
+        <div id="slideImgInBigScreenContainer" className={seeThePhotosBtn ? "active" : undefined}>
+          <div id="slideContainer" className={isGrid ? "grid" : undefined}>
             {imgList.map((img, index) => (
               <img
                 key={index}
-                className={
-                  menuOpened
-                    ? "slideImg menuOpened"
-                    : "slideImg menuOpened displayNone"
-                }
+                className={menuOpened ? "slideImg menuOpened" : "slideImg menuOpened displayNone"}
                 src={img.srcIgm}
                 alt={img.altImg}
               />
             ))}
 
-            <div
-              className={isPhotosMenuOff ? "slideIndex p" : "slideIndex p none"}
-            >
+            <div className={isPhotosMenuOff ? "slideIndex p" : "slideIndex p none"}>
               {imgList.length} photos
             </div>
 
             <div
               onClick={openPhotosMenu}
               className={
-                isGrid
-                  ? "slideBtn photosMenuTrigger gridIsOn"
-                  : "slideBtn photosMenuTrigger"
+                isGrid ? "slideBtn photosMenuTrigger gridIsOn" : "slideBtn photosMenuTrigger"
               }
             >
-              <span className="seeThePhotos">
-                {openOrCloseMenu ? "Voir les photos" : "Fermer"}
-              </span>
+              <span className="seeThePhotos">{openOrCloseMenu ? "Voir les photos" : "Fermer"}</span>
               <svg
                 className={openOrCloseMenu ? "imgIcon" : "imgIcon none"}
                 xmlns="http://www.w3.org/2000/svg"
@@ -245,18 +230,11 @@ function BootstrapCarousel({
               </svg>
             </div>
 
-            <div
-              id="bootstrapCarouselWrapper"
-              className={isGrid ? "none" : null}
-            >
+            <div id="bootstrapCarouselWrapper" className={isGrid ? "none" : undefined}>
               <Carousel>
                 {imgList.map((img, index) => (
                   <Carousel.Item key={index}>
-                    <img
-                      className="slideImg"
-                      src={img.srcIgm}
-                      alt={img.altImg}
-                    />
+                    <img className="slideImg" src={img.srcIgm} alt={img.altImg} />
                     <Carousel.Caption>
                       <p className="slideText">{img.children}</p>
                     </Carousel.Caption>

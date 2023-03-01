@@ -1,4 +1,11 @@
-function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }) {
+import React from "react";
+
+type NavDesktopProps = {
+  SubMenuWhyWithUs: Function;
+  openPhotosMenu: Function
+};
+
+function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps) {
   return (
     <nav id="nav__Desktop">
       <ul>
@@ -8,7 +15,7 @@ function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }) {
             <SubMenuWhyWithUs />
           </ul>
         </li>
-        <li onClick={openPhotosMenu}>
+        <li onClick={() => openPhotosMenu()}>
           <a href="/#" className="goToCheckPoint photosMenuTrigger">
             ➢ Voir les photos
           </a>
