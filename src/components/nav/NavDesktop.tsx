@@ -2,10 +2,10 @@ import React from "react";
 
 type NavDesktopProps = {
   SubMenuWhyWithUs: Function;
-  openPhotosMenu: Function
+  openPhotosMenu: Function;
 };
 
-function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps) {
+export function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps) {
   return (
     <nav id="nav__Desktop">
       <ul>
@@ -55,5 +55,3 @@ function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps) {
     </nav>
   );
 }
-
-export default NavDesktop;

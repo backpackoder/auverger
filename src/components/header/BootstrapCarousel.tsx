@@ -162,12 +162,12 @@ type Props = {
   isGrid: boolean;
   menuOpened: boolean;
   seeThePhotosBtn: boolean;
-  openOrCloseMenu: boolean
+  openOrCloseMenu: boolean;
   isPhotosMenuOff: boolean;
   openPhotosMenu: () => void;
 };
 
-function BootstrapCarousel({
+export function BootstrapCarousel({
   isGrid,
   menuOpened,
   seeThePhotosBtn,
@@ -248,5 +248,3 @@ function BootstrapCarousel({
     </>
   );
 }
-
-export default BootstrapCarousel;

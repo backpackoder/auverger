@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Parts from "./components/Parts";
-import Footer from "./components/Footer";
-import BookBtn from "./components/BookBtn";
+
+// Components
+import { Header } from "./components/header/Header";
+import { Parts } from "./components/parts/Parts";
+import { BookBtn } from "./components/BookBtn";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (

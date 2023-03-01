@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+export function Footer() {
   return (
     <>
       <div id="footer">
@@ -17,11 +17,7 @@ function Footer() {
             >
               ▸ Réserver
             </a>
-            <a
-              href="/#"
-              id="footer__links__div--photos"
-              className="photosMenuTrigger"
-            >
+            <a href="/#" id="footer__links__div--photos" className="photosMenuTrigger">
               ▸ Voir les photos
             </a>
             <a href="#yourHostsCheckPoint">▸ Vos hôtes</a>
@@ -74,5 +70,3 @@ function Footer() {
     </>
   );
 }
-
-export default Footer;

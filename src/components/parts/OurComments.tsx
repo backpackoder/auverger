@@ -1,6 +1,6 @@
 import React from "react";
 
-function OurComments() {
+export function OurComments() {
   return (
     <>
       <h2 data-aos="fade-up">Nos commentaires</h2>
@@ -16,5 +16,3 @@ function OurComments() {
     </>
   );
 }
-
-export default OurComments

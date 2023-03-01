@@ -9,7 +9,7 @@ type Props = {
   openPhotosMenu: Function;
 };
 
-function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMenu }: Props) {
+export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMenu }: Props) {
   // Arrow rotate start
   const [isWhyWithUsArrowRotated, setIsWhyWithUsArrowRotated] = useState(false);
 
@@ -38,18 +38,12 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
         <ul id="sections">
           <li onClick={whyWithUsArrowRotate} id="whyWithUs">
             <a href="/#">
-              <span
-                id="whyWithUsArrow"
-                className={isWhyWithUsArrowRotated ? "arrowDown" : ""}
-              >
+              <span id="whyWithUsArrow" className={isWhyWithUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
               Pourquoi nous ?
             </a>
-            <ul
-              id="whyWithUsMenu"
-              className={isWhyWithUsArrowRotated ? "active" : ""}
-            >
+            <ul id="whyWithUsMenu" className={isWhyWithUsArrowRotated ? "active" : ""}>
               <SubMenuWhyWithUs scrollMenu={scrollMenu} />
             </ul>
           </li>
@@ -63,11 +57,7 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
             </a>
           </li>
           <li>
-            <a
-              onClick={() => scrollMenu()}
-              href="#yourHostsCheckPoint"
-              className="goToCheckPoint"
-            >
+            <a onClick={() => scrollMenu()} href="#yourHostsCheckPoint" className="goToCheckPoint">
               ➢ Vos hôtes
             </a>
           </li>
@@ -82,19 +72,14 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
           </li>
           <li onClick={contactUsArrowRotate} id="contactUs">
             <a href="/#">
-              <span
-                id="contactUsArrow"
-                className={isContactUsArrowRotated ? "arrowDown" : ""}
-              >
+              <span id="contactUsArrow" className={isContactUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
               Contactez-nous
             </a>
             <ul
               id="contactMenu"
-              className={
-                isContactUsArrowRotated ? "contactMenu active" : "contactMenu"
-              }
+              className={isContactUsArrowRotated ? "contactMenu active" : "contactMenu"}
             >
               <li className="whatsappInfos">
                 <img
@@ -126,5 +111,3 @@ function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMen
     </div>
   );
 }
-
-export default NavMobile;
