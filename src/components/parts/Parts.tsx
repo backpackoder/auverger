@@ -18,6 +18,7 @@ export function Parts() {
   useEffect(() => {
     Aos.init({ offset: 100, duration: 700, once: true });
   }, []);
+
   return (
     <>
       <DiscoverAndEnjoy />

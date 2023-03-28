@@ -1,32 +1,32 @@
 /* main start */
 html {
-    font-size: 8px;
-    font-family: 'Exo', sans-serif;
-    overflow-x: hidden;
+  font-size: 8px;
+  font-family: "Exo", sans-serif;
+  overflow-x: hidden;
 }
 body {
-    min-height: 100vh;
-    background-color: bisque;
-    text-align: center;
-    margin: 0;
-    overflow-x: hidden;
+  min-height: 100vh;
+  background-color: bisque;
+  text-align: center;
+  margin: 0;
+  overflow-x: hidden;
 }
 body.noscroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 a:hover {
-    color: #000;
+  color: #000;
 }
 small > a {
-    color: blue;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: blue;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 #ici {
-    display: block;
+  display: block;
 }
 /* main end */

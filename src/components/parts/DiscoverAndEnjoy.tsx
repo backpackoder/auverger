@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function DiscoverAndEnjoy() {
   return (
@@ -10,10 +11,12 @@ export function DiscoverAndEnjoy() {
 }
 
 function Discover() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h2 data-aos="fade-up">Découvrir</h2>
-      <h3 data-aos="fade-up">L'établissement</h3>
+      <h2 data-aos="fade-up">{t("parts.discoverAndEnjoy.titleDiscover")}</h2>
+      <h3 data-aos="fade-up">{t("parts.discoverAndEnjoy.theEstablishment")}</h3>
       <div className="descrBlock">
         <div id="theEstablishmentCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -28,9 +31,7 @@ function Discover() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Situé à Sospel, les couples apprécient particulièrement l'emplacement de cet
-            établissement. Sur Booking, ils lui donnent la note moyenne de 9,8/10 pour un séjour à
-            deux. L'établissement accueille des clients Booking.com depuis le 25 juillet 2016.
+            {t("parts.discoverAndEnjoy.theEstablishmentDescr")}
           </p>
         </div>
       </div>
@@ -39,10 +40,12 @@ function Discover() {
 }
 
 function Enjoy() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h2 data-aos="fade-up">Profitez</h2>
-      <h3 data-aos="fade-up">La piscine</h3>
+      <h2 data-aos="fade-up">{t("parts.discoverAndEnjoy.titleEnjoy")}</h2>
+      <h3 data-aos="fade-up">{t("parts.discoverAndEnjoy.theSwimmingpool")}</h3>
       <div className="descrBlock">
         <div id="swimmingPoolCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -57,8 +60,7 @@ function Enjoy() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Relaxez-vous dans la piscine extérieure ouverte en saison avec vue sur les montagnes. Un
-            parasol et deux chaises longues vous attendent.
+            {t("parts.discoverAndEnjoy.theSwimmingpoolDescr")}
           </p>
         </div>
       </div>

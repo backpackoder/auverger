@@ -6,6 +6,7 @@ import Title from "./Title";
 import { NavMobile } from "../nav/NavMobile";
 import { NavDesktop } from "../nav/NavDesktop";
 import { BootstrapCarousel } from "./BootstrapCarousel";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   // Scrolling menu start
@@ -55,51 +56,53 @@ export function Header() {
 }
 
 function SubMenuWhyWithUs(scrollMenu: Function) {
+  const { t } = useTranslation();
+
   return (
     <>
       <li>
         <a onClick={() => scrollMenu} href="#swimmingPoolCheckPoint" className="goToCheckPoint">
-          ➢ La piscine
+          ➢ {t("parts.discoverAndEnjoy.theSwimmingpool")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#theRiverCheckPoint" className="goToCheckPoint">
-          ➢ La rivière
+          ➢ {t("parts.aLittleParadise.theRiver")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#aPeacefulPlaceCheckPoint" className="goToCheckPoint">
-          ➢ Le calme
+          ➢ {t("parts.aLittleParadise.aPeacefulPlace")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#theBedroomCheckPoint" className="goToCheckPoint">
-          ➢ La chambre à coucher
+          ➢ {t("parts.aLittleParadise.theBedroom")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#theBreakfastCheckPoint" className="goToCheckPoint">
-          ➢ Le petit-déjeuner
+          ➢ {t("parts.ourServices.theBreakfast")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#ourAdvantagesCheckPoint" className="goToCheckPoint">
-          ➢ Nos avantages
+          ➢ {t("parts.ourServices.ourAdvandages")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#theActivitiesCheckPoint" className="goToCheckPoint">
-          ➢ Les activités
+          ➢ {t("parts.whatToDo.theActivities")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#theSurroundingsCheckPoint" className="goToCheckPoint">
-          ➢ Les alentours
+          ➢ {t("parts.whatToDo.theSurroundings")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu} href="#mapCheckPoint" className="goToCheckPoint">
-          ➢ Voir sur la carte
+          ➢ {t("navigation.seeOnTheMap")}
         </a>
       </li>
     </>

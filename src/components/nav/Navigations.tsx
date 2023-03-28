@@ -1,43 +1,47 @@
+import { t } from "i18next";
 import React from "react";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function MenuPart1({ scrollMenu }: { scrollMenu: Function }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <li>
         <a onClick={() => scrollMenu()} href="#swimmingPoolCheckPoint" className="goToCheckPoint">
-          ➢ La piscine
+          ➢ {t("parts.discoverAndEnjoy.theSwimmingpool")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#theRiverCheckPoint" className="goToCheckPoint">
-          ➢ La rivière
+          ➢ {t("parts.aLittleParadise.theRiver")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#aPeacefulPlaceCheckPoint" className="goToCheckPoint">
-          ➢ Le calme
+          ➢ {t("parts.aLittleParadise.aPeacefulPlace")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#theBedroomCheckPoint" className="goToCheckPoint">
-          ➢ La chambre à coucher
+          ➢ {t("parts.aLittleParadise.theBedroom")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#theBreakfastCheckPoint" className="goToCheckPoint">
-          ➢ Le petit-déjeuner
+          ➢ {t("parts.ourServices.theBreakfast")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#ourAdvantagesCheckPoint" className="goToCheckPoint">
-          ➢ Nos avantages
+          ➢ {t("parts.ourServices.ourAdvandages")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#theActivitiesCheckPoint" className="goToCheckPoint">
-          ➢ Les activités
+          ➢ {t("parts.whatToDo.theActivities")}
         </a>
       </li>
       <li>
@@ -46,12 +50,12 @@ function MenuPart1({ scrollMenu }: { scrollMenu: Function }) {
           href="#theSurroundingsCheckPoint"
           className="goToCheckPoint"
         >
-          ➢ Les alentours
+          ➢ {t("parts.whatToDo.theSurroundings")}
         </a>
       </li>
       <li>
         <a onClick={() => scrollMenu()} href="#mapCheckPoint" className="goToCheckPoint">
-          ➢ Voir sur la carte
+          ➢ {t("navigation.seeOnTheMap")}
         </a>
       </li>
     </>
@@ -63,17 +67,17 @@ function MenuPart2() {
     <>
       <li>
         <a href="/#" className="goToCheckPoint photosMenuTrigger">
-          ➢ Voir les photos
+          ➢ {t("navigation.seePictures")}
         </a>
       </li>
       <li>
         <a href="#yourHostsCheckPoint" className="goToCheckPoint">
-          ➢ Vos hôtes
+          ➢ {t("navigation.yourHosts")}
         </a>
       </li>
       <li>
         <a href="#guestReviewsCheckPoint" className="goToCheckPoint">
-          ➢ Nos commentaires
+          ➢ {t("navigation.guestReviews")}
         </a>
       </li>
     </>
@@ -89,7 +93,7 @@ function MenuPart3() {
           alt="WhatsApp Icon"
           className="contactLogoWhatsApp"
         />
-        <p className="whatsapp-content">WhatsApp</p>
+        <p className="whatsapp-content">{t("navigation.whatsApp")}</p>
       </li>
       <li className="mailInfos">
         <img
@@ -97,7 +101,7 @@ function MenuPart3() {
           alt="Mail Icon"
           className="contactLogoMail"
         />
-        <p className="mail-content">Mail</p>
+        <p className="mail-content">{t("navigation.mail")}</p>
       </li>
     </>
   );
@@ -141,7 +145,7 @@ function NavMobile({
               <span id="whyWithUsArrow" className={isWhyWithUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
-              Pourquoi nous choisir ?
+              {t("navigation.whyUs")}
             </a>
             <ul id="whyWithUsMenu" className={isWhyWithUsArrowRotated ? "active" : ""}>
               <MenuPart1 scrollMenu={scrollMenu} />
@@ -153,7 +157,7 @@ function NavMobile({
               <span id="contactUsArrow" className={isContactUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
-              Contactez-nous
+              {t("navigation.contactUs")}
             </a>
             <ul
               id="contactMenu"
@@ -173,14 +177,14 @@ function NavDesktop({ scrollMenu }: { scrollMenu: Function }) {
     <nav id="nav__Desktop">
       <ul>
         <li className="scrollingMenu__desktop">
-          <a href="/#">➢ Pourquoi nous choisir ?</a>
+          <a href="/#">➢ {t("navigation.whyUs")}</a>
           <ul className="navMenu">
             <MenuPart1 scrollMenu={scrollMenu} />
           </ul>
         </li>
         <MenuPart2 />
         <li className="scrollingMenu__desktop">
-          <a href="/#">➢ Contactez-nous</a>
+          <a href="/#">➢ {t("navigation.contactUs")}</a>
           <ul className="navMenu contactMenu">
             <MenuPart3 />
           </ul>

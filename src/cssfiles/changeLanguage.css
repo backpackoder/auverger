@@ -1,0 +1,31 @@
+.changeLanguageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.changeLanguageWrapper button {
+  background-color: transparent;
+  border: none;
+}
+
+.openLanguage {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 5px);
+  display: none;
+  background-color: beige;
+  border: solid 1px;
+  border-radius: 5px;
+}
+.openLanguage.active {
+  display: flex;
+  flex-direction: column;
+}
+.changeLanguage:hover .openLanguage,
+.openLanguage:hover {
+  background-color: bisque;
+}
+.openLanguage button {
+  padding: 5px 10px;
+}
