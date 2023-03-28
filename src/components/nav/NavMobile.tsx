@@ -1,6 +1,8 @@
 import React from "react";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ChangeLanguage } from "../ChangeLanguage";
 
 type Props = {
   SubMenuWhyWithUs: Function;
@@ -10,6 +12,8 @@ type Props = {
 };
 
 export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPhotosMenu }: Props) {
+  const { t } = useTranslation();
+
   // Arrow rotate start
   const [isWhyWithUsArrowRotated, setIsWhyWithUsArrowRotated] = useState(false);
 
@@ -36,12 +40,17 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
           Au verger B&B
         </h1>
         <ul id="sections">
+          <li>
+            <a href="/#" className="changeLanguage">
+              <ChangeLanguage />
+            </a>
+          </li>
           <li onClick={whyWithUsArrowRotate} id="whyWithUs">
             <a href="/#">
               <span id="whyWithUsArrow" className={isWhyWithUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
-              Pourquoi nous ?
+              {t("navigation.whyUs")}
             </a>
             <ul id="whyWithUsMenu" className={isWhyWithUsArrowRotated ? "active" : ""}>
               <SubMenuWhyWithUs scrollMenu={scrollMenu} />
@@ -53,12 +62,12 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
               href="/#"
               className="goToCheckPoint photosMenuTrigger"
             >
-              ➢ Voir les photos
+              ➢ {t("navigation.seePictures")}
             </a>
           </li>
           <li>
             <a onClick={() => scrollMenu()} href="#yourHostsCheckPoint" className="goToCheckPoint">
-              ➢ Vos hôtes
+              ➢ {t("navigation.yourHosts")}
             </a>
           </li>
           <li>
@@ -67,7 +76,7 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
               href="#guestReviewsCheckPoint"
               className="goToCheckPoint"
             >
-              ➢ Nos commentaires
+              ➢ {t("navigation.guestReviews")}
             </a>
           </li>
           <li onClick={contactUsArrowRotate} id="contactUs">
@@ -75,7 +84,7 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
               <span id="contactUsArrow" className={isContactUsArrowRotated ? "arrowDown" : ""}>
                 ➢
               </span>
-              Contactez-nous
+              {t("navigation.contactUs")}
             </a>
             <ul
               id="contactMenu"
@@ -91,7 +100,7 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
                   href="https://api.whatsapp.com/send?phone=0033608054065"
                   className="whatsapp-content"
                 >
-                  WhatsApp
+                  {t("navigation.whatsApp")}
                 </a>
               </li>
               <li className="mailInfos">
@@ -101,7 +110,7 @@ export function NavMobile({ SubMenuWhyWithUs, scrollMenu, isMenuScrolled, openPh
                   className="contactLogoMail"
                 />
                 <a href="mailto:edithbarbiera@aol.fr" className="mail-content">
-                  Mail
+                  {t("navigation.mail")}
                 </a>
               </li>
             </ul>

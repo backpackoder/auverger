@@ -1,5 +1,5 @@
 {
-  "name": "auverger-stepbystep",
+  "name": "auverger",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,11 +10,13 @@
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
     "aos": "^2.3.4",
-    "bootstrap": "^5.2.2",
+    "i18next": "^22.4.13",
+    "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-bootstrap-carousel": "^4.1.1",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

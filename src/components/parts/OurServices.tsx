@@ -1,9 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function OurServices() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <h2 data-aos="fade-up">Nos services</h2>
+      <h2 data-aos="fade-up">{t("parts.ourServices.title")}</h2>
       <div className="descrFlex">
         <TheBreakfast />
         <OurAdvantages />
@@ -13,9 +16,11 @@ export function OurServices() {
 }
 
 function TheBreakfast() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Le petit-déjeuner</h3>
+      <h3 data-aos="fade-up">{t("parts.ourServices.theBreakfast")}</h3>
       <div className="descrBlock">
         <div id="theBreakfastCheckPoint"></div>
         <div id="ourAdvantagesCheckPoint"></div>
@@ -34,9 +39,7 @@ function TheBreakfast() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            De 8h à 9h30, savourez notre délicieux petit-déjeuner français. Lorsque le temps le
-            permet, il peut être servi dans le jardin en face de la piscine ou sur la terrasse. Le
-            prix est de 8,50€ par personne.
+            {t("parts.ourServices.theBreakfastDescr")}
           </p>
         </div>
       </div>
@@ -45,9 +48,11 @@ function TheBreakfast() {
 }
 
 function OurAdvantages() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Nos avantages</h3>
+      <h3 data-aos="fade-up">{t("parts.ourServices.ourAdvandages")}</h3>
       <div className="descrBlock">
         <div id="ourAdvantagesCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -63,9 +68,7 @@ function OurAdvantages() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Vous bénéficierez gratuitement d'un parking privé sur place et d'une connexion Wi-Fi.
-            Vous trouverez un réfrigérateur et un micro-ondes sur la terrasse commune. Un
-            sèche-cheveux, du linge de lit et des serviettes vous seront fournis.
+            {t("parts.ourServices.ourAdvantagesDescr")}
           </p>
         </div>
       </div>

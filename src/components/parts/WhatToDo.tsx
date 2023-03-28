@@ -1,9 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function WhatToDo() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <h2 data-aos="fade-up">Quoi faire</h2>
+      <h2 data-aos="fade-up">{t("parts.whatToDo.title")}</h2>
       <div className="descrFlex">
         <TheActivities />
         <TheSurroundings />
@@ -13,9 +16,11 @@ export function WhatToDo() {
 }
 
 function TheActivities() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Les activités</h3>
+      <h3 data-aos="fade-up">{t("parts.whatToDo.theActivities")}</h3>
       <div className="descrBlock">
         <div id="theActivitiesCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -30,9 +35,7 @@ function TheActivities() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            La région est très appréciée par les motards et les cyclistes. Plusieurs parcours de
-            randonnée pédestre se trouvent très proche de la maison. Un jeu de boules (pétanque) est
-            à votre disposition dans le jardin.
+            {t("parts.whatToDo.theActivitiesDescr")}
           </p>
         </div>
       </div>
@@ -41,9 +44,11 @@ function TheActivities() {
 }
 
 function TheSurroundings() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Les alentours</h3>
+      <h3 data-aos="fade-up">{t("parts.whatToDo.theSurroundings")}</h3>
       <div className="descrBlock">
         <div id="theSurroundingsCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -58,8 +63,7 @@ function TheSurroundings() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Nice est à 25 km, tandis que Monaco et Menton sont à 12 km. La frontière italienne est à
-            seulement 7 km. L'aéroport le plus proche, celui de Nice-Côte d'Azur, se trouve à 32 km.
+            {t("parts.whatToDo.theSurroundingsDescr")}
           </p>
         </div>
       </div>

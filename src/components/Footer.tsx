@@ -1,32 +1,35 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div id="footer">
         <div id="footer__links">
-          <p className="footerTitle">liens utiles</p>
+          <p className="footerTitle">{t("footer.links")}</p>
           <div id="footer__links__a">
             <a href="#theEstablishmentCheckPoint" className="goToCheckPoint">
-              ▸ Pourquoi nous ?
+              ▸ {t("navigation.whyUs")}
             </a>
             <a
               href="https://www.booking.com/hotel/fr/au-verger-b-amp-b.fr.html"
               target="_blank"
               rel="noreferrer"
             >
-              ▸ Réserver
+              ▸ {t("navigation.book")}
             </a>
             <a href="/#" id="footer__links__div--photos" className="photosMenuTrigger">
-              ▸ Voir les photos
+              ▸ {t("navigation.seePictures")}
             </a>
-            <a href="#yourHostsCheckPoint">▸ Vos hôtes</a>
-            <a href="#guestReviewsCheckPoint">▸ Nos commentaires</a>
-            <a href="#mapCheckPoint">▸ Voir sur la carte</a>
+            <a href="#yourHostsCheckPoint">▸ {t("navigation.yourHosts")}</a>
+            <a href="#guestReviewsCheckPoint">▸ {t("navigation.guestReviews")}</a>
+            <a href="#mapCheckPoint">▸ {t("navigation.seeOnTheMap")}</a>
           </div>
         </div>
         <div id="footer__contact">
-          <p className="footerTitle">Contact</p>
+          <p className="footerTitle">{t("navigation.contactUs")}</p>
           <ul>
             <li className="whatsappInfos">
               <img
@@ -35,9 +38,9 @@ export function Footer() {
                 className="contactLogoWhatsApp"
               />
               <a href="https://api.whatsapp.com/send?phone=0033608054065">
-                <strong>WhatsApp:</strong>
+                <strong>{t("navigation.whatsApp")}:</strong>
                 <br />
-                +33 6 74 02 05 02
+                +33 6 08 05 40 65
               </a>
             </li>
             <li className="mailInfos">
@@ -47,7 +50,7 @@ export function Footer() {
                 className="contactLogoMail"
               />
               <a href="mailto:edithbarbiera@aol.fr">
-                <strong>Mail:</strong>
+                <strong>{t("navigation.mail")}:</strong>
                 <br />
                 edithbarbiera@aol.fr
               </a>
@@ -55,7 +58,7 @@ export function Footer() {
           </ul>
         </div>
         <div id="footer__adress">
-          <p className="footerTitle">Adresse</p>
+          <p className="footerTitle">{t("navigation.adress")}</p>
           <p id="adressText" translate="no">
             Au verger B&B
             <br />

@@ -1,9 +1,12 @@
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 export function ALittleParadise() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <h2 data-aos="fade-up">Un petit paradis</h2>
+      <h2 data-aos="fade-up">{t("parts.aLittleParadise.title")}</h2>
       <div className="descrFlex">
         <APeacefulPlace />
         <TheRiver />
@@ -15,9 +18,11 @@ export function ALittleParadise() {
 }
 
 function APeacefulPlace() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Le calme</h3>
+      <h3 data-aos="fade-up">{t("parts.aLittleParadise.aPeacefulPlace")}</h3>
       <div className="descrBlock">
         <div id="aPeacefulPlaceCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -33,9 +38,7 @@ function APeacefulPlace() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Installez-vous confortablement dans le hamac et laissez-vous vous endormir au son du
-            ruissellement de l'eau de la Bévéra. Soyez sûr de vivre un séjour agréable, au cœur d'un
-            environnement paisible, loin de la pollution et du stress de la vie citadine.
+            {t("parts.aLittleParadise.aPeacefulPlaceDescr")}
           </p>
         </div>
       </div>
@@ -44,9 +47,11 @@ function APeacefulPlace() {
 }
 
 function TheRiver() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">La rivière</h3>
+      <h3 data-aos="fade-up">{t("parts.aLittleParadise.theRiver")}</h3>
       <div className="descrBlock">
         <div id="theRiverCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -61,10 +66,7 @@ function TheRiver() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            La nature n'est qu'à un pas de votre lit. Vous pourrez apprécier les canards et plein
-            d'autres éspèces aviaires le long de la rivière. La Bévéra est une douce rivière
-            franco-italienne qui coule dans le département français des Alpes-Maritimes jusqu'à la
-            province italienne d'Imperia.
+            {t("parts.aLittleParadise.theRiverDescr")}
           </p>
         </div>
       </div>
@@ -73,9 +75,11 @@ function TheRiver() {
 }
 
 function TheGarden() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">Le jardin</h3>
+      <h3 data-aos="fade-up">{t("parts.aLittleParadise.theGarden")}</h3>
       <div className="descrBlock">
         <div id="theGardenCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -93,14 +97,17 @@ function TheGarden() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Le jardin contient un potager où y poussent des tomates, salades, courgettes, et toutes
-            autres sortes de bons légumes frais chéris avec soin par les mains et la patience de
-            votre hôte{" "}
-            <a href="#yourHostsCheckPoint" id="robertLink">
-              Robert
-            </a>
-            . Nous avons également quelques arbres fruitiers tels qu'un cerisier, un pommier et un
-            prunier.
+            <Trans
+              components={{
+                anchor: (
+                  <a href="#yourHostsCheckPoint" id="robertLink">
+                    Robert
+                  </a>
+                ),
+              }}
+            >
+              parts.aLittleParadise.theGardenDescr
+            </Trans>
           </p>
         </div>
       </div>
@@ -109,9 +116,11 @@ function TheGarden() {
 }
 
 function TheBedroom() {
+  const { t } = useTranslation();
+
   return (
     <div className="descrBlockWrapper">
-      <h3 data-aos="fade-up">La chambre à coucher</h3>
+      <h3 data-aos="fade-up">{t("parts.aLittleParadise.theBedroom")}</h3>
       <div className="descrBlock">
         <div id="theBedroomCheckPoint"></div>
         <div data-aos="fade-up" className="iconsInRow">
@@ -126,8 +135,7 @@ function TheBedroom() {
             className="descrBlockImg"
           />
           <p data-aos="fade-up" className="mainDescr">
-            Votre chambre est totalement indépendante de la maison. Elle est équipée d'une
-            télévision à écran plat, d'une armoire, ainsi que d'une salle de bain complète.
+            {t("parts.aLittleParadise.theBedroomDescr")}
           </p>
         </div>
       </div>

@@ -1,14 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function HostsAndMap() {
+  const { t } = useTranslation();
+
   return (
     <div id="hostAndMapInRow">
       <div className="hostAndMapInRowWrapper">
         <div data-aos="fade-up" id="yourHosts">
           <div id="yourHostsCheckPoint"></div>
-          <h2 data-aos="fade-up">Vos hôtes</h2>
+          <h2 data-aos="fade-up">{t("parts.yourHosts.title")}</h2>
           <h3 data-aos="fade-up" id="guestReviewsTitle">
-            Qui sommes-nous ?
+            {t("parts.yourHosts.subtitle")}
           </h3>
           <div data-aos="fade-up" id="posYourHostsImg">
             <img
@@ -18,12 +21,7 @@ export function HostsAndMap() {
             />
           </div>
           <p data-aos="fade-up" id="yourHostsDescr">
-            Nous sommes un couple de jeune retraités qui aimont les voyages et nous balader en moto.
-            Edith est une artiste mosaïste, elle travaille sur place dans son atelier. Robert
-            s'occupe de son potager et vous fera goûter quelques spécialités : sirop de menthe
-            sauvage, sirop de lavande, prunes en confiture... Nous sommes des hôtes très discrets,
-            bien que vous pouvez nous rejoindre pour un apéro et faire connaissance, si l'envie vous
-            prend.
+            {t("parts.yourHosts.descr")}
           </p>
         </div>
       </div>
@@ -31,9 +29,9 @@ export function HostsAndMap() {
       <div className="hostAndMapInRowWrapper">
         <div data-aos="fade-up" id="map">
           <div id="mapCheckPoint"></div>
-          <h2 data-aos="fade-up">L'emplacement</h2>
+          <h2 data-aos="fade-up">{t("parts.theLocation.title")}</h2>
           <h3 data-aos="fade-up" id="mapTitle">
-            L'hébergement sur Google maps
+            {t("parts.theLocation.subtitle")}
           </h3>
           <div data-aos="fade-up" id="mapWrapper">
             <iframe
@@ -54,7 +52,7 @@ export function HostsAndMap() {
               target="_blank"
               rel="noreferrer"
             >
-              Afficher une carte plus grande
+              {t("parts.theLocation.descr")}
             </a>
           </small>
         </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { ChangeLanguage } from "../ChangeLanguage";
 
 type NavDesktopProps = {
   SubMenuWhyWithUs: Function;
@@ -6,32 +8,34 @@ type NavDesktopProps = {
 };
 
 export function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps) {
+  const { t } = useTranslation();
+
   return (
     <nav id="nav__Desktop">
       <ul>
         <li className="scrollingMenu__desktop">
-          <a href="/#">➢ Pourquoi nous ?</a>
+          <a href="/#">➢ {t("navigation.whyUs")}</a>
           <ul className="navMenu">
             <SubMenuWhyWithUs />
           </ul>
         </li>
         <li onClick={() => openPhotosMenu()}>
           <a href="/#" className="goToCheckPoint photosMenuTrigger">
-            ➢ Voir les photos
+            ➢ {t("navigation.seePictures")}
           </a>
         </li>
         <li>
           <a href="#yourHostsCheckPoint" className="goToCheckPoint">
-            ➢ Vos hôtes
+            ➢ {t("navigation.yourHosts")}
           </a>
         </li>
         <li>
           <a href="#guestReviewsCheckPoint" className="goToCheckPoint">
-            ➢ Nos commentaires
+            ➢ {t("navigation.guestReviews")}
           </a>
         </li>
         <li className="scrollingMenu__desktop">
-          <a href="/#">➢ Contactez-nous</a>
+          <a href="/#">➢ {t("navigation.contactUs")}</a>
           <ul className="navMenu contactMenu">
             <li className="whatsappInfos">
               <img
@@ -39,7 +43,7 @@ export function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps
                 alt="WhatsApp Icon"
                 className="contactLogoWhatsApp"
               />
-              <p className="whatsapp-content">WhatsApp</p>
+              <p className="whatsapp-content">{t("navigation.whatsApp")}</p>
             </li>
             <li className="mailInfos">
               <img
@@ -47,9 +51,14 @@ export function NavDesktop({ SubMenuWhyWithUs, openPhotosMenu }: NavDesktopProps
                 alt="Mail Icon"
                 className="contactLogoMail"
               />
-              <p className="mail-content">Mail</p>
+              <p className="mail-content">{t("navigation.mail")}</p>
             </li>
           </ul>
+        </li>
+        <li>
+          <a href="/#" className="changeLanguage">
+            <ChangeLanguage />
+          </a>
         </li>
       </ul>
     </nav>
