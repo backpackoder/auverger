@@ -33,13 +33,12 @@ export function ChangeLanguage() {
 
   return (
     <div className="changeLanguageWrapper">
-      <button className="changeLanguageBtn">
+      <button className="changeLanguageBtn" onClick={() => setOpenLanguageList(!openLanguageList)}>
         <img
           src={`https://flagcdn.com/${i18n.language === "en" ? "gb" : i18n.language}.svg`}
           width={50}
           height={30}
           alt="Français"
-          onClick={() => setOpenLanguageList(!openLanguageList)}
         />
       </button>
 
